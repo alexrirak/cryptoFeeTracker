@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link href="/static/css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="comparison">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th class="tl"></th>
+                        <th class="compare-heading">
+                            <div class="coinLogo" style="background: url(/static/img/btc.svg) center no-repeat;"></div> Bitcoin
+                        </th>
+                        <th class="compare-heading">
+                            <div class="coinLogo" style="background: url(/static/img/ltc.svg) center no-repeat;"></div> Litecoin
+                        </th>
+                        <th class="compare-heading">
+                            <div class="coinLogo" style="background: url(/static/img/dash.svg) center no-repeat;"></div> Dash
+                        </th>
+                        <th class="compare-heading">
+                            <div class="coinLogo" style="background: url(/static/img/eth.svg) center no-repeat;"></div> Ether
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td colspan="4">High Priority (1-2 blocks)</td>
+                    </tr>
+                    <tr class="compare-row">
+                        <td>High Priority <div class="blockLabel">(1-2 blocks)</div></td>
+                        <td>${{ coinData['btc']['high'] }}</td>
+                        <td>${{ coinData['ltc']['high'] }}</td>
+                        <td>${{ coinData['dash']['high'] }}</td>
+                        <td>${{ coinData['eth']['high'] }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="4">Medium Priority (3-6 blocks)</td>
+                    </tr>
+                    <tr>
+                        <td>Medium Priority <div class="blockLabel">(3-6 blocks)</div></td>
+                        <td>${{ coinData['btc']['medium'] }}</td>
+                        <td>${{ coinData['ltc']['medium'] }}</td>
+                        <td>${{ coinData['dash']['medium'] }}</td>
+                        <td>${{ coinData['eth']['medium'] }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="4">Low Priority (7+ blocks)</td>
+                    </tr>
+                    <tr class="compare-row">
+                        <td>Low Priority <div class="blockLabel">(7+ blocks)</div></td>
+                        <td>${{ coinData['btc']['low'] }}</td>
+                        <td>${{ coinData['ltc']['low'] }}</td>
+                        <td>${{ coinData['dash']['low'] }}</td>
+                        <td>${{ coinData['eth']['low'] }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                Fee/Gas data is sourced from blockcypher.com --- Crypto to USD rate is sourced from coinbase.com
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
